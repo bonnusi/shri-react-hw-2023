@@ -1,0 +1,30 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    padding: 24px;
+    background-color: $white;
+    display: grid;
+    grid-template-columns: 100px 1fr auto;
+    grid-column-gap: 24px;
+    border-radius: 8px;
+}
+
+.imageContainer {
+    height: 120px;
+    width: 100%;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.title {
+    @include text();
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.description {
+    @include text-italic()
+}

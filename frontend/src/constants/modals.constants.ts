@@ -1,0 +1,3 @@
+export enum MODAL_TYPES {
+  SUBMIT_MODAL = 'SUBMIT_MODAL',
+}

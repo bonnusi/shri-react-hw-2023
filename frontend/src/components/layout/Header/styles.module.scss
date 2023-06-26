@@ -1,0 +1,19 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    padding: 24px 32px;
+    position: fixed;
+    top: 0;
+    height: 84px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: $gray;
+    z-index: 99;
+    align-items: center;
+}
+
+.link {
+    @include title($white);
+}

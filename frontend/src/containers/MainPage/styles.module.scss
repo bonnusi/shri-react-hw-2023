@@ -1,0 +1,17 @@
+@import 'assets/scss/helpers/variables.scss';
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 360px auto;
+    grid-column-gap: 23px;
+    flex-grow: 1;
+}
+
+.cardList {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+.content {
+    position: relative;
+}

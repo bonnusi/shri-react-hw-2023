@@ -1,0 +1,35 @@
+@import 'assets/scss/helpers/variables';
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  animation: spin 0.5s linear 0s infinite;
+  background-color: transparent;
+  border-radius: 50%;
+  height: 20px;
+  opacity: 1;
+  width: 20px;
+  border: 2px solid $primary;
+  border-top-color: $white;
+}
+
+.loaderWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($primary, 0.4);
+  border-radius: 8px;
+}

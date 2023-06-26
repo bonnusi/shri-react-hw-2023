@@ -1,0 +1,9 @@
+@import 'assets/scss/helpers/variables.scss';
+
+.cardList {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 16px;
+}

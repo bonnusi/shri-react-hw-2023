@@ -1,0 +1,71 @@
+@import './variables';
+
+@mixin body-s($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@mixin body-l-bold($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin body-m($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin text($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin text-bold($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin text-italic($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-style: italic;
+}
+
+@mixin title($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+@mixin description($color: $primary) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin link-text($color: $white) {
+  color: $color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

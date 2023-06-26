@@ -1,0 +1,45 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.title {
+    @include title();
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 400px auto;
+    grid-column-gap: 32px;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: $white;
+    position: relative;
+}
+
+.description {
+    @include description();
+    margin-top: 16px;
+}
+
+.weight {
+    font-weight: 600;
+}
+
+.image {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.textContainer {
+    display: grid;
+    grid-row-gap: 16px;
+    margin-bottom: 32px;
+}
+
+.text {
+    @include text();
+}

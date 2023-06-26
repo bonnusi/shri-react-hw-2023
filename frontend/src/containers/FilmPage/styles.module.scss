@@ -1,0 +1,34 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    position: relative
+}
+
+.title {
+    @include title();
+    margin-bottom: 16px;
+}
+
+.description {
+    @include description();
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+.reviewList {
+    display: grid;
+    grid-row-gap: 24px;
+}
+
+.filmContainer {
+    position: relative;
+    min-height: 551.5px;
+}
+
+.reviewContainer {
+    margin-top: 24px;
+    position: relative;
+    min-height: 151.5px;
+}

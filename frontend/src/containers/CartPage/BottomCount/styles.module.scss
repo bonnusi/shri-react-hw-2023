@@ -1,0 +1,12 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+    border-radius: 8px;
+    background-color: $white;
+    @include text-bold();
+    position: sticky;
+    bottom: 24px;
+}

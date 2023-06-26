@@ -1,0 +1,28 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    padding: 24px;
+    background-color: $white;
+    border-radius: 8px;
+    position: sticky;
+    top: 108px;
+    max-height: calc(100vh - 132px);
+    height: 100%;
+}
+
+.title {
+    margin-bottom: 20px;
+    @include text();
+    font-weight: 600;
+}
+
+.label {
+    margin-bottom: 4px;
+    @include body-s();
+}
+
+.inputWrapper {
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}

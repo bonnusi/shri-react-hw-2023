@@ -1,0 +1,22 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.title {
+    @include title();
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: $white;
+    border-radius: 8px;
+}
+
+.accordion {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+.description {
+    @include description();
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}

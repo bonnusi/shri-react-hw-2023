@@ -1,0 +1,16 @@
+@import 'assets/scss/helpers/mixins.scss';
+
+.container {
+    padding-top: 84px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.wrapper {
+    @include wrapper();
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}

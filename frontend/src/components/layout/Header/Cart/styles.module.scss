@@ -1,0 +1,30 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.count {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: inline-flex;
+    background-color: $orange;
+    align-items: center;
+    justify-content: center;
+    @include body-s($white);
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+
+    svg {
+        fill: $white;
+        transition: 0.3s;
+    }
+
+    &:hover {
+        svg {
+            opacity: 0.3;
+        }
+    }
+}

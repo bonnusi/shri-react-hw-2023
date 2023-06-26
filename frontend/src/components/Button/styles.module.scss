@@ -1,0 +1,49 @@
+@import 'assets/scss/helpers/variables.scss';
+
+.button {
+    transition: 0.3s;
+    border: unset;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    line-height: 20px;
+    background-color: unset;
+
+    &.primary {
+        color: $white;
+        background-color: $orange;
+
+        &:hover {
+            background-color: $orangeHover;
+        }
+
+        &:disabled {
+            background-color: $orangeDisabled;
+        }
+    }
+
+    &.transparent {
+        color: $orange;
+        border: 1px solid $orange;
+
+        &:hover {
+            border-color: $orangeHover;
+        }
+
+        &:disabled {
+            border-color: $orangeDisabled;
+        }
+    }
+
+    &.big {
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    &.small {
+        padding: 4px;
+        border-radius: 4px;
+    }
+
+}

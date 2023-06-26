@@ -1,0 +1,14 @@
+@import 'assets/scss/helpers/typography.scss';
+
+.wrapper {
+    padding: 24px 32px;
+    height: 86px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $gray;
+    align-items: center;
+}
+
+.link {
+    @include link-text();
+}

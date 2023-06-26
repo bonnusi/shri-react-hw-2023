@@ -1,0 +1,5 @@
+export const MAIN_URL = '/'
+export const FAQ_URL = '/faq'
+export const ABOUT_US_URL = '/about-us'
+export const FILM_URL = '/film'
+export const CART_URL = '/cart'
