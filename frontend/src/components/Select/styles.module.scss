@@ -10,6 +10,8 @@
     cursor: pointer;
     text-align: left;
     background: $white;
+    display: flex;
+    justify-content: space-between;
 
     &.placeholder {
         color: #999FA6;
@@ -21,6 +23,18 @@
 
     &:focus-visible {
         outline: unset;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #999FA6;
+    }
+
+    &.active {
+        svg {
+            transform: rotateZ(-180deg);
+        }
     }
 }
 

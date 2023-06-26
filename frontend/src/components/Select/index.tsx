@@ -2,6 +2,8 @@ import cn from 'classnames';
 import React, { useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 
+import { CaretDownIcon } from 'constants/icons.constants';
+
 import styles from './styles.module.scss';
 
 type Props = {
@@ -44,9 +46,9 @@ export default function Select({
       <button
         ref={buttonRef}
         onFocus={handleFocus}
-        className={cn([styles.button, { [styles.placeholder]: !currentValue }, className])}
+        className={cn([styles.button, { [styles.placeholder]: !currentValue?.value }, { [styles.active]: !!position }, className])}
       >
-        {currentValue?.label ?? placeholder}
+        {currentValue?.value ? currentValue.label : placeholder} <CaretDownIcon />
       </button>
       {position
         && ReactDOM.createPortal(

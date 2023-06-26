@@ -9,21 +9,21 @@ import { CINEMA_FILTER_KEY, GENRE_FILTER_KEY, SEARCH_NAME_FILTER_KEY } from 'con
 import { GENRE } from 'constants/genre.constants';
 import { useDebounce } from 'hooks/useDebounce';
 import { useUpdateEffect } from 'hooks/useUpdateEffect';
-import { TCinemas } from 'src/types/film.type';
 
 import styles from './styles.module.scss';
+import { useGetCinemaQuery } from '../cinema-slice.api';
 
-const GENRE_OPTIONS = Object.keys(GENRE).map((key) => ({
+const GENRE_OPTIONS = [{ value: '', label: 'Выберите жанр' }].concat(Object.keys(GENRE).map((key) => ({
   value: key,
   label: GENRE[key],
-}));
+})));
 
-type Props = {
-  cinemas: TCinemas[]
-}
+const DEFAULT_CINEMA = [{ value: '', label: 'Выберите кинотеатр' }];
 
-function Filters({ cinemas }: Props) {
+function Filters() {
   const searchParams = useSearchParams();
+
+  const { data: cinemas } = useGetCinemaQuery(undefined);
 
   const [searchValue, setSearchValue] = useState<string>(searchParams.get(SEARCH_NAME_FILTER_KEY) ?? '');
   const [genreValue, setGenreValue] = useState<string>(searchParams.get(GENRE_FILTER_KEY) ?? '');
@@ -58,10 +58,10 @@ function Filters({ cinemas }: Props) {
     changeUrlParams(CINEMA_FILTER_KEY, value);
   };
 
-  const cinemaOptions = cinemas.map((cinema) => ({
+  const cinemaOptions = cinemas ? DEFAULT_CINEMA.concat(cinemas?.map((cinema) => ({
     value: cinema.id,
     label: cinema.name,
-  }));
+  }))) : DEFAULT_CINEMA;
 
   return (
     <div className={styles.wrapper}>
